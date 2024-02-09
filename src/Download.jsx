@@ -5,6 +5,14 @@ import Image3 from './public/image3.jpg';
 import PlayStore from './public/playstore.svg';
 
 const Download = () => {
+  const redirectToAppStore = () => {
+    window.location.href = 'https://apps.apple.com/ng/app/hurri/id6476280214';
+  };
+
+  const redirectToPlayStore = () => {
+    window.location.href = 'https://play.google.com/store/apps/details?id=com.hurri.user';
+  };
+
   return (
     <div className="xl:h-[90vh] w-full xl:pt-0 lg:pt-0 md:pt-8 pt-8 lg:h-[90vh] md:min-h-[90vh] min-h-[90vh] xl:flex-row lg:flex-row md:flex-col flex-col flex justify-between md:justify-center lg:justify-center xl:justify-center items-center bg-[#17181A]">
       <div className="flex-1 w-full pl-16 flex flex-col">
@@ -22,15 +30,18 @@ const Download = () => {
           </div>
 
           <div className="flex gap-x-4 mt-4">
-            <img
-              src={AppleStore}
-              className="text-white text-[28px] px-1 h-7 md:h-12 lg:h-[3.2rem] xl:h-[3.2rem] md:w-24 lg:w-28 xl:w-28 rounded-md border border-[#fff] w-20"
-            />
-
-            <img
-              src={PlayStore}
-              className="text-white text-[28px] px-1 h-7 md:h-12 lg:h-[3.2rem] xl:h-[3.2rem] md:w-24 lg:w-28 xl:w-28 rounded-md border border-[#fff] w-20"
-            />
+            <button onClick={redirectToAppStore}>
+              <img
+                src={AppleStore}
+                className="text-white text-[28px] px-1 h-7 md:h-12 lg:h-[3.2rem] xl:h-[3.2rem] md:w-24 lg:w-28 xl:w-28 rounded-md border border-[#fff] w-20"
+              />
+            </button>
+            <button onClick={redirectToPlayStore}>
+              <img
+                src={PlayStore}
+                className="text-white text-[28px] px-1 h-7 md:h-12 lg:h-[3.2rem] xl:h-[3.2rem] md:w-24 lg:w-28 xl:w-28 rounded-md border border-[#fff] w-20"
+              />
+            </button>
           </div>
         </div>
       </div>
